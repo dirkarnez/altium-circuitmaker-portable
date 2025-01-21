@@ -26,10 +26,8 @@ jobs:
       - name: uncompress msi
         shell: cmd
         run: |
-          md installation &&^
           dir &&^
-          start "" /wait .\installer.exe -UI:None -InstallAll -AutoInstall -Programs:installation
-
+          start "" /wait .\installer.exe -UI:None -InstallAll -AutoInstall -Programs:%cd%\installation
       # -Documents:"%cd%\installation"
 
       # - shell: cmd
