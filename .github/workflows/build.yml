@@ -27,7 +27,8 @@ jobs:
         shell: cmd
         run: |
           md installation &&^
-          .\installer.exe -UI:None -InstallAll -AutoInstall -Programs:"%cd%\installation" 
+          dir &&^
+          start "" /wait .\installer.exe -UI:None -InstallAll -AutoInstall -Programs:installation
 
       # -Documents:"%cd%\installation"
 
