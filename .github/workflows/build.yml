@@ -27,7 +27,7 @@ jobs:
         shell: cmd
         run: |
           dir &&^
-          start "" /wait .\installer.exe -UI:None -User:"${{ env.ALTIUM_USER }}" -Password:"${{ env.ALTIUM_PASSWORD }}" -InstallAll -AutoInstall -Programs:"%cd%\installation" -Documents:"%cd%\installation\Documents"
+          start "" /wait .\installer.exe -UI:None -User:${{ env.ALTIUM_USER }} -Password:${{ env.ALTIUM_PASSWORD }} -InstallAll -AutoInstall -Programs:%cd%\installation -Documents:%cd%\installation\Documents
 
       - shell: cmd
         run: xcopy /H /Y /C "CircuitMaker.exe.Portable.cmd" "installation"
