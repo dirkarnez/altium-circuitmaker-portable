@@ -27,11 +27,10 @@ jobs:
         shell: cmd
         run: |
           dir &&^
-          start "" /wait .\installer.exe -UI:None -InstallAll -AutoInstall -Programs:%cd%\installation
-      # -Documents:"%cd%\installation"
+          start "" /wait .\installer.exe -UI:None -User:"${{ env.ALTIUM_USER }}" -Password:"${{ env.ALTIUM_PASSWORD }}" -InstallAll -AutoInstall -Programs:"%cd%\installation" -Documents:"%cd%\installation\Documents"
 
-      # - shell: cmd
-      #   run: xcopy /H /Y /C "Sculptris.exe.Portable.cmd" "installation"
+      - shell: cmd
+        run: xcopy /H /Y /C "CircuitMaker.exe.Portable.cmd" "installation"
           
       - name: Archive Release
         uses: thedoctor0/zip-release@master
