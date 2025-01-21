@@ -20,7 +20,7 @@ jobs:
       - name: installer
         shell: cmd
         run: |
-          curl "https://altium-official-installers.s3.amazonaws.com/CircuitMaker_2.0/CircuitMakerSetup_2.3.0.3.exe?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3DWNEQM7ZW6YHFNH/20250121/us-east-1/s3/aws4_request&X-Amz-Date=20250121T094159Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=5afee71b904e95959dddf33b6c1148ffeb1a12e1a25699d26b82cf75bec9a57f" -L --output installer.exe &&^
+          curl "https://altium-official-installers.s3.amazonaws.com/CircuitMaker_2.0/CircuitMakerSetup_2.3.0.3.exe?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3DWNEQM7ZW6YHFNH/20250121/us-east-1/s3/aws4_request&X-Amz-Date=20250121T095802Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=e6e05ef8750c5811e1d5e51b333e072d8e3e478dc11fd89cfb2e7a757cd9423b" -L --output installer.exe &&^
           dir
           
       - name: uncompress msi
