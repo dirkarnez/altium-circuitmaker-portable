@@ -27,7 +27,9 @@ jobs:
         shell: cmd
         run: |
           md installation &&^
-          .\installer.exe -UI:None -InstallAll -AutoInstall -Programs:"%cd%\installation" -Documents:"%cd%\installation"
+          .\installer.exe -UI:None -InstallAll -AutoInstall -Programs:"%cd%\installation" 
+
+      # -Documents:"%cd%\installation"
 
       # - shell: cmd
       #   run: xcopy /H /Y /C "Sculptris.exe.Portable.cmd" "installation"
